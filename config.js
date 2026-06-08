@@ -11,12 +11,12 @@ window.APP_CONFIG = {
   // ─── Firebase の設定 ───────────────────────────────────
   // Firebase Console で取得した値をここに貼ってください
   firebase: {
-    apiKey:            "YOUR_FIREBASE_API_KEY",
-    authDomain:        "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId:         "YOUR_PROJECT_ID",
-    storageBucket:     "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId:             "YOUR_APP_ID",
+    apiKey:            "AIzaSyBkX-QXRBcjGheIBiAPMn5iY3k_92yFGD4",
+    authDomain:        "duty-roster-nmc.firebaseapp.com",
+    projectId:         "duty-roster-nmc",
+    storageBucket:     "duty-roster-nmc.firebasestorage.app",
+    messagingSenderId: "193049272380",
+    appId:             "1:193049272380:web:bbec3e1c0accce91d3e339",
   },
 
   // ─── Google OAuth + Calendar API ──────────────────────
