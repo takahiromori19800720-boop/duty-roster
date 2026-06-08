@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>休日当番 Roster — 長崎医療センター</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%85%3C/text%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Noto Serif/Sans JP + Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- React (production builds via CDN) -->
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone (JSX in-browser transpilation) -->
+  <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+
+  <!-- Firebase (compat mode for simple global access) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Google Identity Services (OAuth for Calendar API) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Google API client (for calling Calendar API) -->
+  <script src="https://apis.google.com/js/api.js"></script>
+
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; background: #F4F1EA; }
+    .jp-serif { font-family: 'Noto Serif JP', serif; }
+    .jp-sans  { font-family: 'Noto Sans JP', sans-serif; }
+    .display  { font-family: 'Cormorant Garamond', 'Noto Serif JP', serif; }
+    @keyframes slideIn { from { transform: translateX(20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes fadeUp { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .anim-slideIn { animation: slideIn .3s ease-out; }
+    .anim-fadeUp  { animation: fadeUp .4s ease-out both; }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#1F3D2B;font-family:'Noto Serif JP',serif;">
+      <div style="text-align:center;">
+        <div class="display" style="font-size:3rem;font-family:'Cormorant Garamond',serif;">休日当番 Roster</div>
+        <div style="margin-top:1rem;font-size:0.9rem;color:#6b6b6b;">読み込み中...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App configuration (Firebase + Google OAuth values) -->
+  <script src="./config.js"></script>
+
+  <!-- App code (JSX, transpiled by Babel in-browser) -->
+  <script type="text/babel" data-presets="env,react" data-type="module" src="./app.js"></script>
+</body>
+</html>
