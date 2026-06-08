@@ -22,7 +22,7 @@ window.APP_CONFIG = {
   // ─── Google OAuth + Calendar API ──────────────────────
   // Google Cloud Console で取得した OAuth クライアントID を入れてください
   google: {
-    clientId:   "YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    clientId:   "193049272380-famodefash4i4m26f6d5m33c5tlr6fvq.apps.googleusercontent.com",
     // 同期先カレンダーID（長崎医療センタースタッフ予定表）
     calendarId: "4v7p23of0rf03d2vj5sajckjkk@group.calendar.google.com",
   },
